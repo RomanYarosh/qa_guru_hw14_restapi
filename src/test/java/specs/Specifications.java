@@ -11,14 +11,13 @@ import static helpers.CustomApiListener.withCustomTemplates;
 import static io.restassured.filter.log.LogDetail.*;
 
 public class Specifications {
-
     public static RequestSpecification requestSpec = new RequestSpecBuilder()
-            // Удаляем setBaseUri вообще!
             .addFilter(withCustomTemplates())
             .addFilter(new AllureRestAssured())
             .addHeader("x-api-key", "reqres_a37e4386c6fa47fbb39791e6a1d6f4bc")
             .setContentType(ContentType.JSON)
             .log(URI)
+            .log(METHOD) // Полезно видеть метод в логах
             .log(BODY)
             .build();
 
