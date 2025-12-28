@@ -10,7 +10,8 @@ public class BaseTest {
 
     @BeforeAll
     public static void setup() {
-        RestAssured.baseURI = "https://reqres.in/api";
+        RestAssured.baseURI = "https://reqres.in";
+        RestAssured.basePath = "/api";
 
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .addHeader("x-api-key", API_KEY)
