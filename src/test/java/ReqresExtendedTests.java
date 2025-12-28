@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ReqresExtendedTests {
+public class ReqresExtendedTests extends BaseTest {
 
     @Test
     @DisplayName("Получение списка пользователей")
